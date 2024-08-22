@@ -1,0 +1,5 @@
+运行测试
+
+npx jasmine-browser-runner serve
+
+然后在浏览器里打开 http://localhost:8888/ 即可看到测试结果
