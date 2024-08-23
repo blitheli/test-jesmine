@@ -1,10 +1,11 @@
 /* eslint-disable no-undef */
-import add from '../Apps/lyf/add.js';
+import add from '../src/add.js';
 
 describe("add函数测试样例", function () {
      
      it("测试1", function () {
-          expect(add(1, 2)).toBe(4);
+          const c = add(1, 2);
+          expect(c).toBe(4);
      })
 
 

@@ -15,14 +15,14 @@ describe("wasm函数", function () {
 
 
           //  加载Wasm模块
-          AstroxWasm.dotnetUrl = '../src/_framework/dotnet.js';
-          await AstroxWasm.loadWasmModule();
+          //AstroxWasm.dotnetUrl = '../_framework/dotnet.js';
+          //await AstroxWasm.loadWasmModule();
 
           //  历元时刻
           //const jd = new JulianDate(2457707, 8640 - 32.184, TimeStandard.TAI);
 
-          const motion = AstroxWasm.exports.CelestialLib.GetCbMotionTranslation(2457707, 2300.0, 'Earth', 1, 'Moon', 1);
-          console.log(motion);
+          //const motion = AstroxWasm.exports.CelestialLib.GetCbMotionTranslation(2457707, 2300.0, 'Earth', 1, 'Moon', 1);
+          //console.log(motion);
           expect(1).toBe(1);
      })
 

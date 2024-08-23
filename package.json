@@ -1,5 +1,10 @@
 {
+  "type": "module",
+  "scripts": {
+    "test": "jasmine"
+  },
   "devDependencies": {
+    "jasmine": "^5.2.0",
     "jasmine-browser-runner": "^2.5.0",
     "jasmine-core": "^5.2.0"
   }

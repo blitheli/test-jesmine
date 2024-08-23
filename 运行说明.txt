@@ -1,5 +1,48 @@
 运行测试
 
-npx jasmine-browser-runner serve
 
-然后在浏览器里打开 http://localhost:8888/ 即可看到测试结果
+Jasmine测试框架	
+-------------------------------------------------------------------------------
+
+使用Node测试环境
+	安装npm库
+		-	npm install --save-dev jasmine
+		-	npx jasmine init
+			这个命令会在项目根目录下生成一个spec文件夹，
+			spec/support/jasmine.json
+			可修改这个文件，设置测试测试文件夹和测试文件的路径
+
+    创建或修改vsc的launch.json文件，在configurations中添加如下配置
+        "configurations": [
+            {
+            "type": "node",
+            "request": "launch",
+            "name": "Run Jasmine Tests",
+            "program": "${workspaceFolder}/node_modules/jasmine/bin/jasmine.js",
+            "args": [
+            "--config=${workspaceFolder}/spec/support/jasmine.json"
+            ],
+            "outFiles": [
+            "${workspaceFolder}/dist/**/*.js"
+            ]
+            }
+        ]
+
+    安装"Jasmine Test Explorer"插件
+        这样侧边栏就实现测试的按钮图标了，如果看不见，就点击“调试”按钮，运行“Run Jasmine Tests”后，将测试结果拖到侧边栏即可。
+    
+    测试命令
+        npm test
+        或者在侧边栏使用"测试“按钮，单独运行某个测试文件或者测试用例（可调试）！！！
+
+使用浏览器测试环境
+	安装npm库
+	-	npm install --save-dev jasmine-browser-runner jasmine-core
+	-	npx jasmine-browser-runner init --esm
+		这个命令会在项目根目录下生成一个spec文件夹，
+		spec/support/jasmine-browser.mjs
+		可修改这个文件，设置测试测试文件夹和测试文件的路径
+
+    测试命令
+	    npx jasmine-browser-runner serve
+	    然后浏览器访问: http://localhost:8888/
