@@ -28,6 +28,11 @@ Jasmine测试框架
             }
         ]
 
+    修改package.json文件,增加以下配置
+      "scripts": {
+            "test": "jasmine"
+        },
+        
     安装"Jasmine Test Explorer"插件
         这样侧边栏就实现测试的按钮图标了，如果看不见，就点击“调试”按钮，运行“Run Jasmine Tests”后，将测试结果拖到侧边栏即可。
     
